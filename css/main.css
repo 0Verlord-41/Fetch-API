@@ -64,6 +64,10 @@ section {
     text-shadow: 2px 2px 4px #427388;
   }
 
+  .container-box{
+    margin-bottom: 20px;
+  }
+
 @media (min-width: 468px) {
     .secondaryWrapper{
         display: flex;
