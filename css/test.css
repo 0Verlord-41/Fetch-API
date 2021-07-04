@@ -22,7 +22,13 @@ section {
 }
 
 .container-box{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  }
+
+  .wrapper{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 @media (min-width: 468px) {
@@ -40,26 +46,49 @@ section {
 
   }
 
+@media (min-width: 976px) {
+    .secondaryWrapper{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .container-box{
+      flex-basis: 20.25%;
+      padding: 0px;
+      margin: 10px 0 20px 0;
+  }
+
+  }
+
 #myBtn{
     color: rgb(53, 4, 131);
     cursor: pointer;
     display: block;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 35px;
+    height: 40px;
+    font-weight: 100;
+    line-height: auto;
+    font-size: 12px;
     max-width: 160px;
+    min-width: 100px;
     margin: 0 auto 2em;
     position: relative;
     text-transform: uppercase;
-    vertical-align: middle;
     width: 100%;
   }
 
   @media (min-width: 400px) {
+    #myBtn{
+      font-weight: 400;
+      line-height: 35px;
+      font-size: 16px;
+    }
+
     .btnfos {
       display: inline-block;
       margin-right: 2.5em;
     }
+
   }
 
   .btnfos-5 {
@@ -81,4 +110,22 @@ section {
     outline-offset: 15px;
     outline-color: rgba(255, 255, 255, 0);
     text-shadow: 2px 2px 4px #427388;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;  
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-decoration: none;
+    background-color: snow;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
   }

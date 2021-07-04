@@ -6,7 +6,7 @@ let content = document.getElementById('content');
 
 let userList = document.getElementById('secondaryWrapper');
     function getData(){
-            let url = "https://api.github.com/users?per_page=9";
+            let url = "https://api.github.com/users?per_page=12";
         fetch(url).then((response) => {
             console.log('url');
             return response.json();
@@ -16,11 +16,12 @@ let userList = document.getElementById('secondaryWrapper');
             let str = "";
             data.forEach((element,index) => {
                 let uistr = `<div class="card container-box">
+                                <a href="${element.html_url}" target="_blank">
                                 <img src="${element.avatar_url}" alt="Avatar" style="width:100%">
                                 <div class="container">
                                 <h4><b>${element.login}</b></h4> 
-                                <p>Architect & Engineer</p> 
                                 </div>
+                                </a>
                             </div>`;
                 str += uistr;
             });
