@@ -74,6 +74,7 @@ section {
     margin: 0 auto 2em;
     position: relative;
     text-transform: uppercase;
+    vertical-align: middle;
     width: 100%;
   }
 
@@ -88,7 +89,6 @@ section {
       display: inline-block;
       margin-right: 2.5em;
     }
-
   }
 
   .btnfos-5 {
@@ -110,6 +110,7 @@ section {
     outline-offset: 15px;
     outline-color: rgba(255, 255, 255, 0);
     text-shadow: 2px 2px 4px #427388;
+
   }
 
   .card {

@@ -6,7 +6,9 @@ let content = document.getElementById('content');
 
 let userList = document.getElementById('secondaryWrapper');
     function getData(){
+
             let url = "https://api.github.com/users?per_page=12";
+
         fetch(url).then((response) => {
             console.log('url');
             return response.json();
