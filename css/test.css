@@ -12,6 +12,22 @@ body{
     text-align: center;
 }
 
+.glow{
+  color: #fff;
+  animation: glow 1s ease-in-out infinite alternate;
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #741ce7, 0 0 40px #741ce7, 0 0 50px #741ce7, 0 0 60px #741ce7, 0 0 70px #741ce7;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #440596, 0 0 40px #440596, 0 0 50px #440596, 0 0 60px #440596, 0 0 70px #440596, 0 0 80px #440596;
+  }
+}
+
 .head > h2{
   text-decoration: underline wavy;
 }

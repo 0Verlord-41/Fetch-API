@@ -10,7 +10,7 @@ let userList = document.getElementById('secondaryWrapper');
             let url = "https://api.github.com/users?per_page=12";
 
         fetch(url).then((response) => {
-            console.log('url');
+            console.log('First then');
             return response.json();
         }).then((data) => {
             console.log('Second then');
