@@ -86,10 +86,10 @@ let content = document.getElementById('content');
 //     }
 //     getData();
 
-//Fetch from api and create div flexbox with list cards
+//Fetch from api and create div flexbox with cards
 let userList = document.getElementById('secondaryWrapper');
     function getData(){
-            let url = "https://api.github.com/users?per_page=9";
+            let url = "https://api.github.com/users?per_page=12";
         fetch(url).then((response) => {
             console.log('url');
             return response.json();
@@ -98,21 +98,14 @@ let userList = document.getElementById('secondaryWrapper');
             console.log(data);
             let str = "";
             data.forEach((element,index) => {
-                let uistr = `<li class="container-box">
-                                <a href="${element.html_url}" target="_blank" class="card">
-                                <img src="${element.avatar_url}" class="card__image" alt="" />
-                                <div class="card__overlay">
-                                    <div class="card__header">
-                                    <svg class="card__arc"><path/></svg>                     
-                                    <img class="card__thumb" src="https://img.icons8.com/color-glass/48/000000/instagram-new.png" alt="" />
-                                    <div class="card__header-text">
-                                        <h3 class="card__title">BOX ${index}</h3>            
-                                    </div>
-                                    </div>
-                                    <p class="">GitHub ID: ${element.login}</p>
+                let uistr = `<div class="card container-box">
+                                <a href="${element.html_url}" target="_blank">
+                                <img src="${element.avatar_url}" alt="Avatar" style="width:100%">
+                                <div class="container">
+                                <h4><b>${element.login}</b></h4> 
                                 </div>
-                                </a>      
-                            </li>`;
+                                </a>
+                            </div>`;
                 str += uistr;
             });
             userList.innerHTML = str;
